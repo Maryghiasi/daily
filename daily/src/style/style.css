@@ -1,0 +1,6 @@
+background{
+    width: 100%;
+}
+.root {
+    flex-grow: 1,
+  }
