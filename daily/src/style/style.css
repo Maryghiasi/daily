@@ -1,6 +1,30 @@
-background{
-    width: 100%;
+.full-height{
+    height: 100vh;
+    background-image: url('../assets/images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center
 }
+.paper1{
+    /* background-color: blue; */
+    height: 200px
+
+}
+
+
+.paper2{
+    /* background-color: red; */
+    height: 200px
+}
+
 .root {
     flex-grow: 1,
   }
+
+#main-grid{
+    width: 100% !important;
+    
+}
+
+
+
