@@ -1,42 +1,113 @@
 import React from "react";
-import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
+import { green } from '@material-ui/core/colors';
+import AddCircleIcon from "@material-ui/icons/AddCircle";
 
-import {PropTypes} from 'prop-types';
 
-import dailystyl from '../style/dailystyle.css';
-
+import { PropTypes } from 'prop-types';
+import Footer from '../components/Footer';
+import '../style/dailystyle.css';
 
 
 class DailyExpenses extends React.Component {
-    handleClick() {
-        console.log('Click happened');
+    constructor(props) {
+        super(props);
+        this.state = {
+            priceInput: '',
+            onvanInput: '',
+            itemList : [],
+            totalp : 0
+        }
     }
+
+    handleInput = (event, dastebandi) => {
+        if (dastebandi == 'gheimat') {
+            this.setState({
+                priceInput: event.target.value
+            }, () => {
+                console.log(this.state.priceInput)
+            })
+        } else {
+            this.setState({
+                onvanInput: event.target.value
+            }, () => {
+                console.log(this.state.onvanInput)
+            })
+        }
+    }
+
+    handleAddItems = () => {
+        console.log(this.state.onvanInput , this.state.priceInput)
+        let list = this.state.itemList.concat(
+            <div>
+                <div className="totalexpenses"> 
+                    {this.state.onvanInput} 
+                    
+                </div>
+                <div className="totalprice"> 
+                    {this.state.priceInput} 
+                </div>
+            </div>
+            )
+
+        
+        this.setState({
+            priceInput: '',
+            onvanInput: '',
+            itemList : list,
+            totalp : this.state.totalp + parseInt(this.state.priceInput)
+        },()=>{
+            console.log(this.state.itemList)
+        })
+
+    }
+
     render() {
         // var
         const {
-            buttonLabel,
+
             titleLabel,
-            pricLebel
+            pricLebel 
             //
         } = this.props
 
+
         return (
-            <Grid item xs={9} >
-            <Paper className='paper'>
-                <form className='daily' noValidate autoComplete="off">
-                    <p>{titleLabel}</p>
-                    <TextField id="outlined-basic" label="title" variant="outlined" />
-                    <p>{pricLebel}</p>
-                    <TextField id="outlined-basic" label="pric" variant="outlined" />
-                    <button size="small" color="primary" onClick={() => this.handleClick}>
-                        {buttonLabel}
-                    </button>
-                </form>
-            </Paper>
-        </Grid>
+            <div className="dailytotal">
+
+                <label for="title" >{titleLabel}</label><br></br>
+                <input
+                    type="text"
+                    id="title"
+                    name="title"
+                    className="intitle"
+                    value={this.state.onvanInput}
+                    onChange={(e) => this.handleInput(e, 'onvan')} />
+                    
+
+                <label for="price">{pricLebel}</label>
+                
+                <input
+                    type="number"
+                    id="price"
+                    name="price"
+                    className="inprice"
+                    value={this.state.priceInput}
+                    onChange={(e) => this.handleInput(e, 'gheimat')} />
+
+               
+                <AddCircleIcon  onClick={() => this.handleAddItems()} color='danger' />
+                <div className="listblock">
+                {this.state.itemList}
+                </div>
+            
+                 {/* <div className="totalmoney">{this.state.totalp}</div> */}
+              
+            </div>
+        
+           
+           
+
 
         )
     };
@@ -46,14 +117,16 @@ DailyExpenses.propTypes = {
 
     buttonLabel: PropTypes.string,
     titleLabel: PropTypes.string,
-    pricLebel:PropTypes.string
+    pricLebel: PropTypes.string,
+    deleteLable: PropTypes.string
 
 
 }
 DailyExpenses.defaultProps = {
     buttonLabel: 'Add',
-    titleLabel:'Title',
-    pricLebel:'Pric'
+    titleLabel: 'Title',
+    pricLebel: 'Pric',
+   
 
 }
 
