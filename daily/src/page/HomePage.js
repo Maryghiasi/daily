@@ -1,33 +1,31 @@
 import React from "react";
-
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-
+import '../style/style.css';
+import Clevcalc from '../components/Clevcalc'
 import DailyExpenses from "../components/DailyExpenses";
-
+import Footer from "../components/Footer";
 
 
 class Homepage extends React.Component {
     render() {
         // var
-        const {
-            //
-        } = this.props
+        // const {
+        //     //
+        // } = this.props
         return (
-
-            <div className='root'>
-                <Grid container spacing={3}>
-                    <Grid item xs={12}>
-                        <Paper className='paper'>xs=12</Paper>
-                    </Grid>
-                    <Grid item xs={9} >
+                <div className='full-height'>
+                    <Grid id='main-grid' container >
+                    <Grid className='paper1' item xs={7} >
                         <DailyExpenses/>
                     </Grid>
-                    <Grid item xs={3} >
-                        <Paper className='paper'>andaz3</Paper>
+                    <Grid className='paper2' item xs={5} >
+                        <Clevcalc />
                     </Grid>
                 </Grid>
-            </div>
+                    <Footer jame={this.props.ghjkglk}/>
+                </div>
+                
+                
 
         )
     };
