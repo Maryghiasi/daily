@@ -123,8 +123,8 @@ DailyExpenses.propTypes = {
 
 }
 DailyExpenses.defaultProps = {
-    titleLabel: 'Title',
-    pricLebel: 'Pric',
+    titleLabel: 'TITLE',
+    pricLebel: 'PRICE',
 
 
 }

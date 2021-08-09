@@ -19,7 +19,7 @@ class Footer extends React.Component {
     render(){
         return(
             <div className='Footermoney'>
-                 <div className="totalmoney">{this.props.jame} {'  '}  {this.props.prefix}</div>
+                 <div className="totalmoney"> {this.props.prefix}{'  '}{this.props.jame} </div>
                 
             </div>
           
@@ -33,7 +33,7 @@ Footer.propTypes = {
 
 }
 Footer.defaultProps = {
-    prefix : 'toman'
+    prefix : 'TOTAL:'
 
 }
 export default Footer;

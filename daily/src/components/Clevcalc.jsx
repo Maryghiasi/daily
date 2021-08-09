@@ -152,7 +152,7 @@ class Clevcalc extends React.Component {
                 </div>
                 
                 <div className="row">
-                    <div className="col-lg-9"><button onClick={()=>this.handleClick('Clear')} id='main-row'>clear</button></div>
+                    <div className="col-lg-9"><button onClick={()=>this.handleClick('Clear')} id='main-row' className='numberic'>CLEAR</button></div>
                     <div className="col-lg-3 "><button  className='operator'>%</button></div>
 
                 </div>
