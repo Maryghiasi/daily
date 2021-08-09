@@ -1,9 +1,9 @@
 import React from "react";
-import Button from '@material-ui/core/Button';
+
 import '../style/style.css';
 import '../style/clevstyle.css';
-import Grid from '@material-ui/core/Grid';
-import { Clear } from "@material-ui/icons";
+
+
 
 class Clevcalc extends React.Component {
     constructor(props) {
@@ -78,7 +78,7 @@ class Clevcalc extends React.Component {
             })
 
         } else if (num == '*') {
-            // + is clicked now
+            // * is clicked now
             this.setState({
                 sumOperator: false,
                 menhaOperator: false,
@@ -101,7 +101,7 @@ class Clevcalc extends React.Component {
                     total: totalNumber
                 })
             } else if (this.state.multiOperator == true) {
-                // F-S
+                // F*S
                 let totalNumber = parseInt(this.state.firstValue) * parseInt(this.state.secondValue)
                 this.setState({
                     total: totalNumber
@@ -119,6 +119,7 @@ class Clevcalc extends React.Component {
 
 
         } else if (num == 'Clear') {
+             // clear is clicked now
             this.setState({
                 firstValue: '0',
                 secondValue: '0',

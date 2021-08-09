@@ -1,7 +1,4 @@
 
-
-
-
 td{
     text-align: center;
     width: 64px;
@@ -36,7 +33,7 @@ button{
     border: none;
     border-radius: 10px;
     font-weight: bold;
-    box-shadow: 2px 2px 4px 3px  rgba(0, 0, 0, 0.3) , -2px -2px 4px 3px  rgba(148, 127, 127, 0.6);
+    box-shadow: 2px 2px 4px 3px  rgba(0, 0, 0, 0.3) , -2px -2px 4px 3px  rgba(255, 255, 255, 0.6);
 }
 
 /* .row{
@@ -59,6 +56,7 @@ button{
     padding: 0px;
     text-align: center;
 }
+
 #main-row{
     width: 90%;
 }

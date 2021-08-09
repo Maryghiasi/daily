@@ -1,25 +1,26 @@
 
-   .intitle{
-        width: 300px;
-        padding: 10px ;
-        margin:auto;
-        box-sizing: border-box;
-        border: 1px solid rgb(8, 8, 8);
-        border-radius: 10px;
-        box-shadow: 2px 2px 4px 3px  rgba(17, 17, 17, 0.3) , -2px -2px 4px 3px  rgba(88, 82, 82, 0.6);
-      }
-   .inprice{
-        width: 150px;
-        padding: 10px ;
-        margin:auto;
-        box-sizing: border-box;
-        border: 1px solid rgb(8, 8, 8);
-        border-radius: 10px;
-        box-shadow: 2px 2px 4px 3px  rgba(17, 17, 17, 0.3) , -2px -2px 4px 3px  rgba(88, 82, 82, 0.6);
+.intitle{
+ width: 300px;
+ padding: 10px ;
+ margin:auto;
+ box-sizing: border-box;
+ border: 1px solid rgb(8, 8, 8);
+ border-radius: 10px;
+box-shadow: 2px 2px 4px 3px  rgba(17, 17, 17, 0.3) , -2px -2px 4px 3px  rgba(88, 82, 82, 0.6);
+ }
 
-     }
+.inprice{
+  width: 150px;
+ padding: 10px ;
+ margin:auto;
+ box-sizing: border-box;
+ border: 1px solid rgb(8, 8, 8);
+ border-radius: 10px;
+ box-shadow: 2px 2px 4px 3px  rgba(17, 17, 17, 0.3) , -2px -2px 4px 3px  rgba(88, 82, 82, 0.6);
 
-   .dailytotal{
+}
+
+.dailytotal{
     /* background: #FFFFFF; */
     margin-top: 100px;
     margin-left: 150px;
@@ -28,39 +29,57 @@
      left: 129px;
      top: 107px;
       
-   }
+}
 
 
-   .totalexpenses{
-      /* margin-right: 20px !important;
-      margin-left: 10px;
-      margin-top: 5px; */
+.totalexpenses{
       background: rgb(245, 243, 243);
       height: 50px;
       padding: 10px;
       display: inline-block;
       width: 80%;
       border-radius: 20px 0px 0px 20px;
+}
 
-      /* box-sizing: border-box;
-      border: 1px solid rgb(8, 8, 8);
-      border-radius: 10px; */
-
-   }
-   .totalprice{
+.totalprice{
       background: rgb(173, 170, 170);
       width: 20%;
       height: 50px;
       display: inline-block;
       padding: 10px;
       border-radius: 0px 20px 20px 0px;
-   }
+}
  
 
   
-   .listblock{
+.listblock{
       overflow-y:auto ;
       margin: 10px;
       margin-left: 0px;
       height: 50vh;
-   }
+   
+}
+
+.additem{
+   margin-top: 5px;
+}
+
+.icone{
+
+  margin-left: 30px;
+  color: green;
+   background-color: white;
+   border-radius: 10px;
+}
+.inputLabel{
+
+  font-weight: bold;
+   margin-bottom: 10px;
+   display: block;
+}
+.inputblock{
+
+   display: inline-block;
+   margin-left: 10px;
+      
+}
