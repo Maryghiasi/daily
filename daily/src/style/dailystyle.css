@@ -21,45 +21,42 @@ box-shadow: 2px 2px 4px 3px  rgba(17, 17, 17, 0.3) , -2px -2px 4px 3px  rgba(88,
 }
 
 .dailytotal{
-    /* background: #FFFFFF; */
-    margin-top: 100px;
-    margin-left: 150px;
-    width: 680px;
-     height: 94px;
-     left: 129px;
-     top: 107px;
+
+ margin-top: 100px;
+ margin-left: 150px;
+ width: 680px;
+ height: 94px;
+ left: 129px;
+ top: 107px;
       
 }
 
 
 .totalexpenses{
-      background: rgb(245, 243, 243);
-      height: 50px;
-      padding: 10px;
-      display: inline-block;
-      width: 50%;
-      box-shadow: 2px 2px 4px 3px  rgba(32, 32, 32, 0.3) , -1px -1px 2px 1px  rgba(105, 105, 105, 0.6);
+  background: rgb(245, 243, 243);
+ height: 50px;
+ padding: 10px;
+ display: inline-block;
+ width: 50%;
+ box-shadow: 2px 2px 4px 3px  rgba(32, 32, 32, 0.3) , -1px -1px 2px 1px  rgba(105, 105, 105, 0.6);
       
 }
 
 .totalprice{
-      background: rgb(173, 170, 170);
-      width: 20%;
-      height: 50px;
-      display: inline-block;
-      padding: 10px;
-      box-shadow: 2px 2px 4px 3px  rgba(32, 32, 32, 0.3) , -1px -1px 2px 1px  rgba(105, 105, 105, 0.6);
+ background: rgb(173, 170, 170);
+ width: 20%;
+ height: 50px;
+ display: inline-block;
+ padding: 10px;
+ box-shadow: 2px 2px 4px 3px  rgba(32, 32, 32, 0.3) , -1px -1px 2px 1px  rgba(105, 105, 105, 0.6);
 
-     
-     
 }
  
-
   
 .listblock{
-      overflow-y:auto ;
-      margin: 10px;
-      height: 50vh;
+  overflow-y:auto ;
+  margin: 10px;
+  height: 50vh;
    
 }
 
@@ -69,10 +66,10 @@ box-shadow: 2px 2px 4px 3px  rgba(17, 17, 17, 0.3) , -2px -2px 4px 3px  rgba(88,
 
 .icone{
 
-  margin-left: 30px;
-  color: green;
-   background-color: white;
-   border-radius: 10px;
+ margin-left: 30px;
+ color: green;
+ background-color: white;
+ border-radius: 10px;
 }
 .inputLabel{
 
@@ -83,7 +80,7 @@ box-shadow: 2px 2px 4px 3px  rgba(17, 17, 17, 0.3) , -2px -2px 4px 3px  rgba(88,
 }
 .inputblock{
 
-   display: inline-block;
-   margin-left: 10px;
+ display: inline-block;
+ margin-left: 10px;
       
 }

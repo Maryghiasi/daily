@@ -6,24 +6,20 @@
     background-position: center
 }
 .paper1{
-    /* background-color: blue; */
-    height: 200px
-
+ height: 200px;
 }
 
 
 .paper2{
-    /* background-color: red; */
-    height: 200px
+ height: 200px;
 }
 
 .root {
-    flex-grow: 1,
-  }
+ flex-grow: 1;
+}
 
 #main-grid{
     width: 100% !important;
-    
 }
 
 

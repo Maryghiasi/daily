@@ -22,12 +22,12 @@ class Clevcalc extends React.Component {
     }
 
     handleClick = (num) => {
-        if (typeof (num) == 'number') {
+        if (typeof (num) === 'number') {
 
-            if (this.state.menhaOperator == true | this.state.sumOperator == true | this.state.multiOperator == true) {
+            if (this.state.menhaOperator === true | this.state.sumOperator === true | this.state.multiOperator === true) {
                 // check if - clicked
                 // set second Value
-                if (this.state.total == 0) {
+                if (this.state.total === 0) {
                     this.setState({
                         secondValue: this.state.secondValue + String(num)
                     })
@@ -43,11 +43,9 @@ class Clevcalc extends React.Component {
                     })
 
                 }
-            } else if (this.state.total == 0) {
+            } else if (this.state.total === 0) {
                 this.setState({
                     firstValue: this.state.firstValue + String(num)
-                }, () => {
-                    console.log(this.state.firstValue)
                 })
 
 
@@ -61,7 +59,7 @@ class Clevcalc extends React.Component {
                 })
             }
 
-        } else if (num == '-') {
+        } else if (num === '-') {
             // - is clicked now
             this.setState({
                 menhaOperator: true,
@@ -69,7 +67,7 @@ class Clevcalc extends React.Component {
                 multiOperator: false
             })
 
-        } else if (num == '+') {
+        } else if (num === '+') {
             // + is clicked now
             this.setState({
                 sumOperator: true,
@@ -77,7 +75,7 @@ class Clevcalc extends React.Component {
                 multiOperator: false
             })
 
-        } else if (num == '*') {
+        } else if (num === '*') {
             // * is clicked now
             this.setState({
                 sumOperator: false,
@@ -85,22 +83,22 @@ class Clevcalc extends React.Component {
                 multiOperator: true
             })
 
-        } else if (num == '=') {
+        } else if (num === '=') {
             console.log(this.state.firstValue, this.state.secondValue)
-            if (this.state.sumOperator == true) {
+            if (this.state.sumOperator === true) {
                 // F+S
                 let totalNumber = parseInt(this.state.firstValue) + parseInt(this.state.secondValue)
                 this.setState({
                     total: totalNumber
                 })
 
-            } else if (this.state.menhaOperator == true) {
+            } else if (this.state.menhaOperator === true) {
                 // F-S
                 let totalNumber = parseInt(this.state.firstValue) - parseInt(this.state.secondValue)
                 this.setState({
                     total: totalNumber
                 })
-            } else if (this.state.multiOperator == true) {
+            } else if (this.state.multiOperator === true) {
                 // F*S
                 let totalNumber = parseInt(this.state.firstValue) * parseInt(this.state.secondValue)
                 this.setState({
@@ -118,8 +116,8 @@ class Clevcalc extends React.Component {
 
 
 
-        } else if (num == 'Clear') {
-             // clear is clicked now
+        } else if (num === 'Clear') {
+            // clear is clicked now
             this.setState({
                 firstValue: '0',
                 secondValue: '0',
@@ -141,20 +139,19 @@ class Clevcalc extends React.Component {
         return (
             <div className="container calc-base">
                 <div className=" totalvalue">
-                    {this.state.firstValue == 0 ? '' : this.state.firstValue}
+                    {this.state.firstValue === '0' ? '' : this.state.firstValue}
                     <br></br>
-                    {this.state.sumOperator == true ? '+' : ''}
-                    {this.state.menhaOperator == true ? '-' : ''}
-                    {this.state.multiOperator == true ? '×' : ''}
+                    {this.state.sumOperator === true ? '+' : ''}
+                    {this.state.menhaOperator === true ? '-' : ''}
+                    {this.state.multiOperator === true ? '×' : ''}
                     <br></br>
-                    {this.state.secondValue == 0 ? '': this.state.secondValue} <br></br>
-                     {this.state.total}
+                    {this.state.secondValue === '0' ? '' : this.state.secondValue}
+                    <br></br>
+                    {this.state.total}
                 </div>
-                
                 <div className="row">
-                    <div className="col-lg-9"><button onClick={()=>this.handleClick('Clear')} id='main-row' className='numberic'>CLEAR</button></div>
-                    <div className="col-lg-3 "><button  className='operator'>%</button></div>
-
+                    <div className="col-lg-9"><button onClick={() => this.handleClick('Clear')} id='main-row' className='numberic'>CLEAR</button></div>
+                    <div className="col-lg-3 "><button className='operator'>%</button></div>
                 </div>
                 <div className="row">
                     <div className="col-lg-3 "><button onClick={() => this.handleClick(7)} className='numeric'>7</button></div>
@@ -163,26 +160,24 @@ class Clevcalc extends React.Component {
                     <div className="col-lg-3 "><button onClick={() => this.handleClick('-')} className='operator'>-</button></div>
                 </div>
                 <div className="row">
-                    <div className="col-lg-3 "><button onClick={() => this.handleClick(4)}className='numeric'>4</button></div>
+                    <div className="col-lg-3 "><button onClick={() => this.handleClick(4)} className='numeric'>4</button></div>
                     <div className="col-lg-3 "><button onClick={() => this.handleClick(5)} className='numeric'>5</button></div>
                     <div className="col-lg-3 "><button onClick={() => this.handleClick(6)} className='numeric'>6</button></div>
                     <div className="col-lg-3 "><button onClick={() => this.handleClick('+')} className='operator'>+</button></div>
                 </div>
                 <div className="row">
-                    <div className="col-lg-3 "><button onClick={() => this.handleClick(1)}className='numeric'>1</button></div>
+                    <div className="col-lg-3 "><button onClick={() => this.handleClick(1)} className='numeric'>1</button></div>
                     <div className="col-lg-3 "><button onClick={() => this.handleClick(2)} className='numeric'>2</button></div>
                     <div className="col-lg-3 "><button onClick={() => this.handleClick(3)} className='numeric'>3</button></div>
-                    <div className="col-lg-3 "><button onClick={() => this.handleClick('*')}className='operator'>*</button></div>
+                    <div className="col-lg-3 "><button onClick={() => this.handleClick('*')} className='operator'>*</button></div>
                 </div>
                 <div className="row">
-                <div className="col-lg-3 "><button onClick={() => this.handleClick(0)} className='numeric'>0</button></div>
+                    <div className="col-lg-3 "><button onClick={() => this.handleClick(0)} className='numeric'>0</button></div>
                     <div className="col-lg-3 "><button onClick={() => this.handleClick('.')} className='numeric'>.</button></div>
                     <div className="col-lg-6 "><button id='main-row' onClick={() => this.handleClick('=')} className='operator'>=</button></div>
                 </div>
 
             </div>
-
-
 
         )
     };

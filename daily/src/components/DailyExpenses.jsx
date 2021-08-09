@@ -1,5 +1,5 @@
 import React from "react";
-import Button from '@material-ui/core/Button';
+
 import AddCircleIcon from "@material-ui/icons/AddCircle";
 
 import { PropTypes } from 'prop-types';
@@ -15,12 +15,12 @@ class DailyExpenses extends React.Component {
             onvanInput: '',
             itemList: [],
             totalp: 0
-        }
-    }
+        };
+    };
 
     handleInput = (event, dastebandi) => {
         //set priceinput and onvaninput
-        if (dastebandi == 'gheimat') {
+        if (dastebandi === 'gheimat') {
             this.setState({
                 priceInput: event.target.value
 
@@ -30,8 +30,8 @@ class DailyExpenses extends React.Component {
                 onvanInput: event.target.value
 
             })
-        }
-    }
+        };
+    };
 
     handleAddItems = () => {
         //show list
@@ -40,14 +40,12 @@ class DailyExpenses extends React.Component {
             <div className='additem'>
                 <div className="totalexpenses">
                     {this.state.onvanInput}
-
                 </div>
                 <div className="totalprice">
                     {this.state.priceInput}
                 </div>
             </div>
         )
-
 
         this.setState({
             // totalp+pariceinput
@@ -61,7 +59,7 @@ class DailyExpenses extends React.Component {
         })
 
 
-    }
+    };
 
     render() {
         // var
@@ -76,7 +74,11 @@ class DailyExpenses extends React.Component {
         return (
             <div className="dailytotal">
                 <div className='inputblock'>
-                    <label className='inputLabel' for="title" >{titleLabel}</label>
+                    <label
+                        className='inputLabel'
+                        for="title" >
+                        {titleLabel}
+                    </label>
                     <input
                         type="text"
                         id="title"
@@ -88,7 +90,11 @@ class DailyExpenses extends React.Component {
 
 
                 <div className='inputblock'>
-                    <label className='inputLabel' for="price">{pricLebel}</label>
+                    <label
+                        className='inputLabel'
+                        for="price">
+                        {pricLebel}
+                    </label>
                     <input
                         type="number"
                         id="price"
@@ -98,16 +104,11 @@ class DailyExpenses extends React.Component {
                         onChange={(e) => this.handleInput(e, 'gheimat')} />
 
                 </div>
-
                 <AddCircleIcon className='icone' onClick={() => this.handleAddItems()} />
                 <div className="listblock">
                     {this.state.itemList}
                 </div>
             </div>
-
-
-
-
 
         )
     };
@@ -121,12 +122,12 @@ DailyExpenses.propTypes = {
     jaaaam: PropTypes.func
 
 
-}
+};
 DailyExpenses.defaultProps = {
     titleLabel: 'TITLE',
     pricLebel: 'PRICE',
 
 
-}
+};
 
 export default DailyExpenses;

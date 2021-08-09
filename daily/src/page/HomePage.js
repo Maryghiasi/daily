@@ -12,42 +12,42 @@ class Homepage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            totall : 0
-        }
-    }
+            totall: 0
+        };
+    };
 
 
-    handleTotal =(meghdar)=>{
+    handleTotal = (meghdar) => {
         this.setState({
-            totall : meghdar
+            totall: meghdar
         })
-    }
+    };
     render() {
         // var
         // const {
         //     //
         // } = this.props
         return (
-                <div className='full-height'>
-                    <Grid id='main-grid' container >
+            <div className='full-height'>
+                <Grid id='main-grid' container >
                     <Grid className='paper1' item xs={7} >
-                        <DailyExpenses jaaaam={(meghdar)=>this.handleTotal(meghdar)} />
+                        <DailyExpenses jaaaam={(meghdar) => this.handleTotal(meghdar)} />
                     </Grid>
                     <Grid className='paper2' item xs={5} >
                         <Clevcalc />
                     </Grid>
                 </Grid>
-                    <Footer jame={this.state.totall}  />
-                </div>
-                
-
+                <Footer jame={this.state.totall} />
+            </div>
         )
     };
 };
 
 Homepage.propTypes = {
 
-}
-Homepage.defaultProps = {}
+};
+Homepage.defaultProps = {
+
+};
 
 export default Homepage;
